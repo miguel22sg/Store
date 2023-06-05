@@ -4,17 +4,25 @@ import "./Card.css";
 import React from "react";
 import { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
+import Pagination from "./Pagination";
 
-
-
-function Card(props) {
+function Card() {
+  //Constantes para el listado y la busqueda de los articulos
   const [articulos, setArticulos] = useState([]);
   const [fake, setFake] = useState([]);
   const [busqueda, setBusqueda] = useState();
- 
 
-  const fakestore=async()=>{
-     await axios
+  //Constantes para la paginacion
+  const [productosPorPagina] = useState(8);
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalProductos = articulos.length;
+  
+  const lastIndex = currentPage * productosPorPagina;
+   
+  const firstIndex = lastIndex - productosPorPagina;
+
+  const fakestore = async () => {
+    await axios
       .get("https://fakestoreapi.com/products")
       .then((response) => {
         setFake(response.data);
@@ -24,14 +32,14 @@ function Card(props) {
         console.log(error);
       });
   };
-  const handleChange =e=> {
+  const handleChange = (e) => {
     setBusqueda(e.target.value);
     filtrar(e.target.value);
   };
 
   const filtrar = (terminoBusqueda) => {
     // eslint-disable-next-line array-callback-return
-    var resultadosBusqueda = fake.filter((elemento)=>{
+    var resultadosBusqueda = fake.filter((elemento) => {
       if (
         elemento.title
           .toString()
@@ -44,7 +52,7 @@ function Card(props) {
     setArticulos(resultadosBusqueda);
   };
   useEffect(() => {
-  fakestore();
+    fakestore();
   }, []);
 
   return (
@@ -56,13 +64,17 @@ function Card(props) {
           value={busqueda}
           onChange={handleChange}
         />
-        <button><i><BiSearch/></i></button>
+        <button>
+          <i>
+            <BiSearch />
+          </i>
+        </button>
       </div>
       <div className="containerSS">
         {articulos.map((values) => {
           return (
             <div>
-              <div className="cardProducts">
+              <div className="cardProducts" key={values.id}>
                 <div className="cardImage">
                   <img src={values.image} />
                 </div>
@@ -85,8 +97,15 @@ function Card(props) {
               </div>
             </div>
           );
-        })}
+          //Utilizamos la funcion .slice para decir el numero de productos que queremos por pagina
+        }).slice(firstIndex, lastIndex)}
       </div>
+      <Pagination
+        productosPorPagina={productosPorPagina}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalProductos={totalProductos}
+      />
     </div>
   );
 }

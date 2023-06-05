@@ -1,6 +1,5 @@
 import './Layout.css'
 import { Outlet } from "react-router-dom"
-import { Link } from "react-router-dom"
 import { BiSearch,} from 'react-icons/bi';
 
 
@@ -18,22 +17,7 @@ function Layout(){
                 </div>
             </div>
             <div className='rightNavbar'>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/About">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/About">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/About">About</Link>
-                        </li>
-                    </ul>
-                </nav>
+               
             </div>
         </div>
         <Outlet/>

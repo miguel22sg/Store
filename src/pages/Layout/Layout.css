@@ -1,8 +1,11 @@
+
 .navbar{
     background-color: #EFF1F3;
     color: black;
     display: flex;
     width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
 }
 .leftNavbar{
     width: 30%;
