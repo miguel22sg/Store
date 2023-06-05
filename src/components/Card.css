@@ -26,31 +26,9 @@
     display: flex;
     justify-content: center;
 }
-/*contenedor con la descripcion del producto*/
-.cardDescripcion{
-    height: 100px;
-    overflow-y: scroll;
-    scrollbar-width: 1px;
-    
-}
-    /*Scrollbar de la descripcion del producto*/
-.cardDescripcion::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 10px;
-}
-.cardDescripcion::-webkit-scrollbar-thumb {
-    background-color: #797979;
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-}
 
 .cardDescripcion p{
-    word-wrap: break-word;
-    white-space: pre-line;
-    height: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+   font-size: 20px;
 }
 
 .cardfooter{
@@ -79,10 +57,11 @@
     background-color:coral ;
 }
 .cardTitle{
-    height: 50px;
+    height: 100px;
     overflow: hidden;
     margin-left: 10px;
     margin-right: 10px;
+    font-size: 20px;
 }
 
 .BuscarArticulos input{
