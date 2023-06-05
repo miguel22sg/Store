@@ -1,0 +1,79 @@
+.navbar{
+    background-color: #EFF1F3;
+    color: black;
+    display: flex;
+    width: 100%;
+}
+.leftNavbar{
+    width: 30%;
+}
+.leftNavbar h2{
+    margin-top: 20px;
+}
+.rightNavbar{
+    width: 30%;
+    display: flex;
+    justify-content: end;
+}
+.rightNavbar ul{
+    margin-top: 20px;
+    background-color: #FEFEFE;
+    border-radius: 10px;
+    height: 30px;
+    margin-right: 20px;
+    box-shadow: 10px -15px teal;
+    box-shadow: 10px 5px 5px teal;
+}
+.rightNavbar li{
+    color: black;
+    list-style: none;
+    display: inline-flex;
+    height: 30px;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.rightNavbar a{
+    font-style: normal;
+    list-style: none;
+    outline-style: none;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: teal;
+}
+.centerNavbar{
+    justify-content: center;
+    width: 40%;
+    display: flex;
+    color: white;
+}
+.barraDeBusqueda{
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    width: 80%;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #FEFEFE;;
+    box-shadow: 30px -15px teal;
+    box-shadow: 10px 5px 5px teal;
+}
+.barraDeBusqueda input{
+    width: 90%;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    outline: none;
+}
+
+.barraDeBusqueda button{
+    background-color: #FEFEFE;;
+    color: black;
+    border-radius: 0 10px 10px 0;
+    border-color: #FEFEFE;;
+    width: 10%;
+}

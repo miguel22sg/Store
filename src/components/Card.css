@@ -1,0 +1,103 @@
+/*Contenedor del producto*/
+.containerSS{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.cardProducts{
+    height: 450px;
+    overflow: hidden;
+    background-color: white;
+    width: 300px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+/*Contenedor con la imagen del producto*/
+.cardProducts img{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+/*Contenedor de imagen del producto*/
+.cardImage{
+    display: flex;
+    justify-content: center;
+}
+/*contenedor con la descripcion del producto*/
+.cardDescripcion{
+    height: 100px;
+    overflow-y: scroll;
+    scrollbar-width: 1px;
+    
+}
+    /*Scrollbar de la descripcion del producto*/
+.cardDescripcion::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+}
+.cardDescripcion::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.cardDescripcion p{
+    word-wrap: break-word;
+    white-space: pre-line;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.cardfooter{
+    padding-bottom: 10px;
+    margin-top: 15px;
+}
+.cardfooter button{
+    color: white;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    border: none;
+    width: 150px;
+}
+.btnDetallesDelProducto{
+    background-color: #797979;
+}
+.btnDetallesDelProducto:hover{
+    background-color: coral;
+}
+.btnAgregarAlCarrito{
+    background-color: teal;
+}
+.btnAgregarAlCarrito:hover{
+    background-color:coral ;
+}
+.cardTitle{
+    height: 50px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.BuscarArticulos input{
+    width: 300px;
+    height: 35px;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    border: none;
+}
+.BuscarArticulos button{
+    height: 35px;
+    background-color: teal;
+    border-radius: 0 20px 20px 0;
+    width: 40px;
+    color: white;
+    font-size: 10px;
+    border: none;
+}

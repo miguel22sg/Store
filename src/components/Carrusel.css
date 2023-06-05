@@ -1,0 +1,14 @@
+.contenedorCarrusel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Carrusel{
+    height: 400px;
+    background-color: black;
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
