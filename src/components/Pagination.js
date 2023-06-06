@@ -35,6 +35,7 @@ function Pagination({
       setCurrentPage(currentPage + 1)
     }
   }
+  //Utilizamos esta funcion para movernos por los numeros de paginas especificos
   const onSpecificPage = (n) =>{
     setCurrentPage(n)
   }

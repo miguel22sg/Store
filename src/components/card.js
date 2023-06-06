@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+/*Instalamos la libreria Axio para recibir respuestas faciles de processar de nuestra API*/
 import axios from "axios";
 import "./Card.css";
 import React from "react";
@@ -6,6 +7,7 @@ import { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
 import Pagination from "./Pagination";
 
+//Aqui desectruturamos las constantes que creamos en el APP.js 
 function Card({
   allProducts,
   setAllProducts,
@@ -40,6 +42,8 @@ function Card({
     setCountProducts(contProducts + 1);
     setAllProducts([...allProducts, product]);
   };
+ 
+  //Funcion donde para llamar a la API de Fake Store
   const fakestore = async () => {
     await axios
       .get("https://fakestoreapi.com/products")
@@ -51,12 +55,15 @@ function Card({
         console.log(error);
       });
   };
+  //Utulizamos esta funcion para una busqueda dinamica de los articulos
   const handleChange = (e) => {
     setBusqueda(e.target.value);
     filtrar(e.target.value);
   };
 
+  //Funcion para filtrar los datos del buscador
   const filtrar = (terminoBusqueda) => {
+    //Tambien nos aseguramos de que no sea case sensitive
     // eslint-disable-next-line array-callback-return
     var resultadosBusqueda = fake.filter((elemento) => {
       if (
@@ -109,7 +116,7 @@ function Card({
                     </div>
                   </div>
                   <div className="cardfooter">
-                    <button className="btnDetallesDelProducto" type="">
+                    <button className="btnDetallesDelProducto" type="" onClick={()=> onAddProduct(values)}>
                       Detalles
                     </button>
                     <button

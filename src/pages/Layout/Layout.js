@@ -3,7 +3,7 @@ import "./Layout.css";
 import { Outlet } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import { useState } from "react";
-
+//Desectructuramos las constantes
 function Layout({
   allProducts,
   setAllProducts,
@@ -12,15 +12,16 @@ function Layout({
   setCountProducts,
   setTotal,
 }) {
+  //Utilizamos estas constantes para desplegar y ocultar el carrito
   const [active, setActive] = useState(false);
-
+  //Funcion para borrar los productos del carrito
   const onDeleteProduct = (product) => {
     const result = allProducts.filter((item) => item.id !== product.id);
     setAllProducts(result);
     setCountProducts(contProducts - 1);
     setTotal(total - product.price);
   };
-
+  //Funcion para vaciar todo el carrito
   const onClearCart = () =>{
     setAllProducts([]);
     setTotal(0);
