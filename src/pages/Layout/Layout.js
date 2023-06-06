@@ -1,7 +1,7 @@
 /* eslint-disable array-callback-return */
 import "./Layout.css";
 import { Outlet } from "react-router-dom";
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiShoppingBag } from "react-icons/bi";
 import { useState } from "react";
 //Desectructuramos las constantes
 function Layout({
@@ -36,12 +36,7 @@ function Layout({
         </div>
         <div className="centerNavbar">
           <div className="barraDeBusqueda">
-            <input placeholder="Buscar" name="search"></input>
-            <button type="">
-              <i>
-                <BiSearch />
-              </i>
-            </button>
+            <h1>M22SG SHOPPING</h1>
           </div>
         </div>
         <div className="rightNavbar">
