@@ -15,6 +15,9 @@ function Card({
   setCountProducts,
   total,
   setTotal,
+  setProductoSeleccionado,
+  detallesActive,
+  setDetallesActive,
 }) {
   //Constantes para el listado y la busqueda de los articulos
   const [articulos, setArticulos] = useState([]);
@@ -27,6 +30,13 @@ function Card({
   const totalProductos = articulos.length;
   const lastIndex = currentPage * productosPorPagina;
   const firstIndex = lastIndex - productosPorPagina;
+
+  //
+  const handleProductoSeleccionado = (producto) =>{
+    setProductoSeleccionado(producto);
+    setDetallesActive(!detallesActive)
+
+  }
 
   //Constantes para el carrito de compras
   // Utilizamos esta funcion para que no se puede agregar el mismo producto dos veces
@@ -82,7 +92,7 @@ function Card({
   }, []);
 
   return (
-    <div>
+    <div className={`${detallesActive ? "hidden-cart" : ""}`}>
       <div className="BuscarArticulos">
         <input
           placeholder="Buscar"
@@ -116,7 +126,7 @@ function Card({
                     </div>
                   </div>
                   <div className="cardfooter">
-                    <button className="btnDetallesDelProducto" type="" onClick={()=> onAddProduct(values)}>
+                    <button className="btnDetallesDelProducto" type="" onClick={()=> handleProductoSeleccionado(values)}>
                       Detalles
                     </button>
                     <button

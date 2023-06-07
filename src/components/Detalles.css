@@ -1,0 +1,45 @@
+.contendorD{
+    display: flex;
+    justify-content: center;
+}
+.ContenedorDetalles{
+    background-color: white;
+    width: 70%;
+    border-radius: 20px;
+}
+.contenedorTituloDetalles{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contenedorTituloDetalles h2{
+    font-size: 20px;
+}
+.contenedorImagenDetalles{
+    height: 300px;
+}
+.contenedorImagenDetalles img{
+    height: 300px;
+}
+.contenedorDescripcionDetalles{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.contenedorDescripcionDetalles h2{
+    font-size: 20px;
+}
+.btncerrarVentanaDetalles{
+    width: 100%;
+    background-color: teal;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+.hidden-cart{
+    display: none;
+}
